@@ -210,7 +210,8 @@ for directory in temp[1]:
 
 
 print(SAMPLE_TREE)
-
+SAMPLE_TREE1 = []
+SAMPLE_TREE1.append(SAMPLE_TREE)
 
 
 FILE_TYPE_MAPPING = {
@@ -313,7 +314,7 @@ class SampleChef(SushiChef):
         Create ChannelNode and build topic tree.
         """
         channel = self.get_channel(*args, **kwargs)   # creates ChannelNode from data in self.channel_info
-        _build_tree(channel, SAMPLE_TREE)
+        _build_tree(channel, SAMPLE_TREE1)
         raise_for_invalid_channel(channel)
 
         return channel
